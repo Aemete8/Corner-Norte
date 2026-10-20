@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Córner Norte: noticias, análisis y agenda del fútbol (sitio ficticio para práctica de HTML5 semántico)."
+    />
+    <title>Córner Norte | Noticias y análisis de fútbol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- HEADER: identidad del sitio y navegación principal -->
+    <header class="site-header" id="inicio">
+      <div class="brand">
+        <img
+          src="assets/img/logo.svg"
+          alt="Logo de Córner Norte: balón con líneas de cancha"
+          width="56"
+          height="56"
+        />
+        <p class="brand__name">Córner Norte</p>
+      </div>
+
+      <!-- NAV: enlaces a las secciones de la página -->
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#noticias">Noticias</a></li>
+          <li><a href="#analisis">Análisis</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero">
+        <h1>Todo el partido, antes y después del pitazo</h1>
+        <p>
+          Crónicas, análisis tácticos y la agenda de la fecha en un solo lugar.
+          Hecho para quienes leen el fútbol más allá del marcador.
+        </p>
+      </div>
+    </header>
+
+    <!-- MAIN: contenido principal único de la página -->
+    <main class="layout">
+      <div class="content">
+        <!-- SECTION 1: noticias, cada una es un ARTICLE independiente -->
+        <section id="noticias" aria-labelledby="noticias-titulo">
+          <h2 id="noticias-titulo">Últimas noticias</h2>
+
+          <article class="card">
+            <h3>
+              Real Sabana golpea de visitante y se mete en la pelea por el
+              título
+            </h3>
+            <p class="meta">
+              Publicado el
+              <time datetime="2026-10-18">18 de octubre de 2026</time> · Crónica
+            </p>
+            <p>
+              Con un gol en el minuto 87, Real Sabana se llevó los tres puntos
+              ante Atlético Montañero y quedó a una unidad del líder. El equipo
+              visitante resistió casi una hora con diez hombres.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Atlético Montañero anuncia cambios en el cuerpo técnico</h3>
+            <p class="meta">
+              Publicado el
+              <time datetime="2026-10-19">19 de octubre de 2026</time> ·
+              Actualidad
+            </p>
+            <p>
+              Tras la derrota del fin de semana, la directiva confirmó que el
+              entrenador seguirá en el cargo, pero se sumarán dos asistentes
+              enfocados en preparación física y jugadas a balón parado.
+            </p>
+          </article>
+        </section>
+
+        <!-- SECTION 2: análisis con imagen, figure y figcaption -->
+        <section id="analisis" aria-labelledby="analisis-titulo">
+          <h2 id="analisis-titulo">Análisis táctico</h2>
+
+          <figure>
+            <img
+              src="assets/img/cancha.svg"
+              alt="Esquema de una cancha de fútbol con jugadores en blanco y amarillo y flechas punteadas que muestran el movimiento del balón"
+              width="600"
+              height="380"
+            />
+            <figcaption>
+              Así rompió Real Sabana la línea de cuatro: pase largo al extremo y
+              diagonal del volante.
+            </figcaption>
+          </figure>
+
+          <p>
+            El gol llegó de una jugada ensayada. Mientras el delantero fijaba a
+            los centrales, el volante por el carril interno aprovechó el espacio
+            que dejó el lateral y definió de primera. La clave fue el
+            desplazamiento sin balón, no el pase final.
+          </p>
+          <p>
+            Para la próxima fecha, el cuerpo técnico tendrá que decidir si
+            mantiene la presión alta o recupera una defensa más cerrada, dado el
+            desgaste mostrado en el último cuarto de hora.
+          </p>
+        </section>
+      </div>
+
+      <!-- ASIDE: contenido complementario, no es el contenido principal -->
+      <aside id="agenda" aria-labelledby="agenda-titulo">
+        <h2 id="agenda-titulo">Agenda de la fecha</h2>
+        <ul class="agenda">
+          <li>
+            <time datetime="2026-10-24T16:00">Sáb 24 · 4:00 p. m.</time>
+            <span>Real Sabana vs. Deportivo Páramo</span>
+          </li>
+          <li>
+            <time datetime="2026-10-25T14:00">Dom 25 · 2:00 p. m.</time>
+            <span>Atlético Montañero vs. Unión Cordillera</span>
+          </li>
+          <li>
+            <time datetime="2026-10-25T18:30">Dom 25 · 6:30 p. m.</time>
+            <span>Club Río Alto vs. Juventud del Valle</span>
+          </li>
+        </ul>
+        <h3>Para seguir leyendo</h3>
+        <ul>
+          <li><a href="#noticias">Resumen de la fecha pasada</a></li>
+          <li><a href="#analisis">Cómo funciona la presión alta</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <!-- FOOTER: información de autoría y contacto -->
+    <footer class="site-footer" id="contacto">
+      <p>
+        <strong>Córner Norte</strong> · Proyecto académico de HTML5 semántico
+      </p>
+      <p>Autor: Tu Nombre Completo · Año de elaboración: 2026</p>
+      <address>
+        Contacto: <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a>
+      </address>
+      <p>
+        <small
+          >© 2026 Córner Norte. Todos los derechos reservados. Equipos,
+          resultados y personas mencionados son ficticios.</small
+        >
+      </p>
+      <p><a href="#inicio">Volver arriba</a></p>
+    </footer>
+  </body>
+</html>

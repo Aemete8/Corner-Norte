@@ -1,0 +1,208 @@
+/* Paleta: césped, tiza, tarjeta amarilla */
+:root {
+  --cesped: #0f3d2e;
+  --cesped-claro: #14523c;
+  --noche: #0a2219;
+  --tiza: #f3f1e7;
+  --linea: #cfd8c8;
+  --amarilla: #f2c400;
+  --texto: #16241d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  background: var(--tiza);
+  color: var(--texto);
+}
+
+h1,
+h2,
+h3,
+.brand__name,
+nav,
+.meta,
+time,
+figcaption {
+  font-family: "Archivo", "Arial Narrow", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+a:focus-visible {
+  outline: 3px solid var(--amarilla);
+  outline-offset: 3px;
+}
+
+/* Header con franjas de césped recortado */
+.site-header {
+  color: var(--tiza);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--cesped) 0 60px,
+    var(--cesped-claro) 60px 120px
+  );
+  padding: 1rem 1.25rem 2.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.brand__name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-stretch: 75%;
+}
+
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 1rem 0 2rem;
+}
+.site-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.25rem 0;
+  border-bottom: 3px solid transparent;
+}
+.site-nav a:hover {
+  border-bottom-color: var(--amarilla);
+}
+
+.hero {
+  max-width: 40rem;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 8vw, 4.2rem);
+  line-height: 1;
+  font-weight: 900;
+  font-stretch: 70%;
+  margin-bottom: 1rem;
+}
+.hero p {
+  max-width: 34rem;
+  color: var(--linea);
+}
+
+/* Layout: una columna en móvil, dos desde 900px */
+.layout {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  display: grid;
+  gap: 2.5rem;
+}
+.content section + section {
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-stretch: 80%;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--cesped);
+}
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin-bottom: 0.4rem;
+}
+
+.card {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--linea);
+  max-width: 42rem;
+}
+.meta {
+  font-size: 0.9rem;
+  color: #4a5a50;
+  margin-bottom: 0.6rem;
+}
+.content p {
+  max-width: 42rem;
+  margin-bottom: 1rem;
+}
+
+figure {
+  margin: 0 0 1.25rem;
+  max-width: 42rem;
+}
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+figcaption {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--noche);
+  color: var(--tiza);
+}
+
+/* Aside: agenda lateral con borde amarillo */
+aside {
+  background: #fff;
+  padding: 1.25rem;
+  border-top: 6px solid var(--amarilla);
+  align-self: start;
+}
+aside h2 {
+  font-size: 1.4rem;
+}
+aside ul {
+  padding-left: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+aside .agenda {
+  list-style: none;
+  padding: 0;
+}
+aside .agenda li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--linea);
+}
+aside time {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--cesped);
+}
+
+.site-footer {
+  background: var(--noche);
+  color: var(--tiza);
+  padding: 2rem 1.25rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.site-footer p,
+.site-footer address {
+  margin: 0.35rem 0;
+  font-style: normal;
+}
+.site-footer a {
+  color: var(--amarilla);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr 20rem;
+  }
+  .site-header {
+    padding: 1.5rem 3rem 4rem;
+  }
+}
